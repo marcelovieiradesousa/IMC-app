@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="etAltura, etPeso" />
+
+    <TextView
+        android:id="@+id/tvIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="32dp"
+        android:text="IMC"
+        android:textColor="@color/black"
+        android:textSize="48dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/tvPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Digite seu peso em KG"
+        app:layout_constraintBottom_toTopOf="@+id/etPeso"
+        app:layout_constraintEnd_toEndOf="@+id/etPeso"
+        app:layout_constraintStart_toStartOf="@+id/etPeso" />
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:inputType="text"
+        android:maxLength="5"
+        android:text="00.00"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/tvAltura"
+        app:layout_constraintEnd_toEndOf="@+id/tvIMC"
+        app:layout_constraintStart_toStartOf="@+id/tvIMC" />
+
+    <TextView
+        android:id="@+id/tvAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Digite sua altura em Metros"
+        app:layout_constraintBottom_toTopOf="@+id/etAltura"
+        app:layout_constraintEnd_toEndOf="@+id/etAltura"
+        app:layout_constraintStart_toStartOf="@+id/etAltura" />
+
+    <EditText
+        android:id="@+id/etAltura"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="310dp"
+        android:inputType="text"
+        android:maxLength="4"
+        android:text="0.00"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvClassifica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEU GORDO"
+        android:textColor="@color/black"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="@id/btnCalcular"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@id/btnCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/etAltura"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:padding="24dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
